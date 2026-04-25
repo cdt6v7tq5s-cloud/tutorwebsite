@@ -3,39 +3,420 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
+  <title>Geography Tuition | A-Level &amp; GCSE Specialist</title>
+  <meta name="description" content="Expert A-Level and GCSE Geography tuition across all UK exam boards. Personalised online sessions tailored to every ability level." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <span class="logo">My Website</span>
-      <ul>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-word">Geography</span>
+        <span class="nav__logo-rule"></span>
+        <span class="nav__logo-sub">Tuition</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#resources">Resources</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav__book">Book a Session</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to My Website</h1>
-      <p>A simple site, ready to grow.</p>
-    </section>
+  <section class="hero" id="home">
+    <div class="hero__topo" aria-hidden="true">
+      <svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <ellipse cx="720" cy="380" rx="480" ry="340" fill="none" stroke="white" stroke-width="0.9" opacity="0.07"/>
+        <ellipse cx="720" cy="380" rx="390" ry="270" fill="none" stroke="white" stroke-width="0.9" opacity="0.07"/>
+        <ellipse cx="720" cy="380" rx="300" ry="205" fill="none" stroke="white" stroke-width="0.9" opacity="0.07"/>
+        <ellipse cx="720" cy="380" rx="215" ry="145" fill="none" stroke="white" stroke-width="0.9" opacity="0.07"/>
+        <ellipse cx="720" cy="380" rx="135" ry="90" fill="none" stroke="white" stroke-width="0.9" opacity="0.07"/>
+        <ellipse cx="720" cy="380" rx="62" ry="44" fill="none" stroke="white" stroke-width="0.9" opacity="0.07"/>
+        <ellipse cx="130" cy="160" rx="220" ry="160" fill="none" stroke="white" stroke-width="0.7" opacity="0.05"/>
+        <ellipse cx="130" cy="160" rx="155" ry="112" fill="none" stroke="white" stroke-width="0.7" opacity="0.05"/>
+        <ellipse cx="130" cy="160" rx="90" ry="68" fill="none" stroke="white" stroke-width="0.7" opacity="0.05"/>
+        <ellipse cx="130" cy="160" rx="40" ry="30" fill="none" stroke="white" stroke-width="0.7" opacity="0.05"/>
+        <ellipse cx="200" cy="620" rx="300" ry="200" fill="none" stroke="white" stroke-width="0.7" opacity="0.04"/>
+        <ellipse cx="200" cy="620" rx="210" ry="140" fill="none" stroke="white" stroke-width="0.7" opacity="0.04"/>
+        <ellipse cx="200" cy="620" rx="130" ry="88" fill="none" stroke="white" stroke-width="0.7" opacity="0.04"/>
+      </svg>
+    </div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">A-Level &amp; GCSE Geography</div>
+      <h1 class="hero__title">
+        Geography tuition<br>
+        <em>built around you.</em>
+      </h1>
+      <p class="hero__sub">Expert online tuition across every UK exam board. Structured, personalised sessions for every ability — from grade 4 to A*.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--gold">Book a Free Consultation</a>
+        <a href="#approach" class="btn btn--ghost">How I Teach</a>
+      </div>
+    </div>
+    <div class="hero__indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__indicator-bar"></div>
+    </div>
+  </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>This is a starter website. Edit this page to make it your own.</p>
-    </section>
+  <div class="strip">
+    <div class="strip__inner">
+      <div class="strip__item">
+        <strong>GCSE &amp; A-Level</strong>
+        <span>Both qualification levels</span>
+      </div>
+      <div class="strip__rule"></div>
+      <div class="strip__item">
+        <strong>All Exam Boards</strong>
+        <span>AQA, Edexcel, OCR &amp; more</span>
+      </div>
+      <div class="strip__rule"></div>
+      <div class="strip__item">
+        <strong>1-to-1 Online</strong>
+        <span>Dedicated, personal sessions</span>
+      </div>
+      <div class="strip__rule"></div>
+      <div class="strip__item">
+        <strong>Resources Included</strong>
+        <span>Notes, papers, revision guides</span>
+      </div>
+    </div>
+  </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    </section>
-  </main>
+  <section class="section courses" id="courses">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Courses</span>
+        <h2 class="section__title">What I teach</h2>
+        <p class="section__sub">Rigorous, exam-focused tuition at both qualification levels, tailored to your exact specification.</p>
+      </div>
+      <div class="courses__grid">
 
-  <footer>
-    <p>&copy; 2026 My Website</p>
+        <div class="course-card fade-up">
+          <div class="course-card__tag">GCSE</div>
+          <h3 class="course-card__title">GCSE Geography</h3>
+          <p class="course-card__desc">Comprehensive support from Year 9 through to final exams. Every topic covered methodically, with a focus on extended writing, case study recall, and data interpretation.</p>
+          <ul class="course-card__list">
+            <li>Physical landscapes — coasts, rivers, glaciation</li>
+            <li>Urban issues and changing cities</li>
+            <li>Global development and resource management</li>
+            <li>Fieldwork skills and geographical enquiry</li>
+            <li>Paper 3 issue evaluation technique</li>
+          </ul>
+          <div class="course-card__foot">
+            <a href="#contact" class="btn btn--navy">Enquire about GCSE</a>
+          </div>
+        </div>
+
+        <div class="course-card course-card--dark fade-up">
+          <div class="course-card__tag">A-Level</div>
+          <h3 class="course-card__title">A-Level Geography</h3>
+          <p class="course-card__desc">In-depth support for AS and A2. From essay planning and 20-mark answers to NEA guidance and synoptic thinking — structured precisely to your board's mark scheme.</p>
+          <ul class="course-card__list">
+            <li>Physical geography — tectonic, coastal, water &amp; carbon</li>
+            <li>Human geography — globalisation, migration, development</li>
+            <li>Extended essay and 20-mark answer technique</li>
+            <li>NEA coursework planning and guidance</li>
+            <li>Synoptic skills and exam strategy</li>
+          </ul>
+          <div class="course-card__foot">
+            <a href="#contact" class="btn btn--gold">Enquire about A-Level</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section boards">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <span class="section__label">Exam Boards</span>
+        <h2 class="section__title">Every board. Every syllabus.</h2>
+        <p class="section__sub">Sessions are planned to your specific specification — no generic teaching, no assumptions about what your exam requires.</p>
+      </div>
+      <div class="boards__grid fade-up">
+        <div class="board-cell">AQA</div>
+        <div class="board-cell">Edexcel</div>
+        <div class="board-cell">OCR</div>
+        <div class="board-cell">WJEC</div>
+        <div class="board-cell">Eduqas</div>
+        <div class="board-cell">Cambridge<small>International</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section approach" id="approach">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">My Approach</span>
+        <h2 class="section__title">Tuition that adapts to you</h2>
+        <p class="section__sub">Every student is different. Sessions are built around how you learn — not a one-size-fits-all script.</p>
+      </div>
+      <div class="approach__grid">
+
+        <div class="approach-card fade-up">
+          <div class="approach-card__icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="8" width="30" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="5" y1="15" x2="35" y2="15" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="8" x2="14" y2="32" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="9.5" cy="22" r="1.5" fill="currentColor"/>
+              <circle cx="9.5" cy="27" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Diagnostic Assessment</h3>
+          <p>Before we begin I identify exactly where the gaps are, so we target the topics that will make the most difference to your grade.</p>
+        </div>
+
+        <div class="approach-card fade-up">
+          <div class="approach-card__icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="15" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M7 36c0-7.18 5.82-13 13-13s13 5.82 13 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M26 19l4 3-4 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Personalised Learning Plan</h3>
+          <p>Sessions follow a bespoke plan — whether you need foundational support or are pushing for top marks, pace and depth are set accordingly.</p>
+        </div>
+
+        <div class="approach-card fade-up">
+          <div class="approach-card__icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 33V16l12-8 12 8v17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="15" y="21" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="20" cy="14" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Exam Board Precision</h3>
+          <p>Every answer, essay, and case study is coached to the exact mark scheme. The language your examiner rewards is the language we practise.</p>
+        </div>
+
+        <div class="approach-card fade-up">
+          <div class="approach-card__icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="5" width="32" height="30" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M11 26l6-6 5 5 8-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Measurable Progress</h3>
+          <p>Regular timed practice and mock questions track progress in real terms. You will know your grade trajectory, not just whether you feel more confident.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section resources" id="resources">
+    <div class="container">
+      <div class="resources__inner">
+        <div class="resources__text fade-up">
+          <span class="section__label">Resources</span>
+          <h2 class="section__title">Everything you need — included.</h2>
+          <p>Sessions come with a full suite of supporting material. No need to source your own — everything is tailored to your exam board and topic.</p>
+          <ul class="resources__list">
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Custom revision notes for every topic
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Curated past paper questions with mark schemes
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Case study banks and factual summary sheets
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Essay planning frameworks and model answers
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Graphical and statistical skills practice
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Between-session tasks with written feedback
+            </li>
+          </ul>
+        </div>
+        <div class="resources__visual fade-up" aria-hidden="true">
+          <div class="doc doc--back">
+            <div class="doc__accent"></div>
+            <div class="doc__line"></div>
+            <div class="doc__line doc__line--short"></div>
+            <div class="doc__line"></div>
+            <div class="doc__line doc__line--short"></div>
+            <div class="doc__line"></div>
+          </div>
+          <div class="doc doc--mid">
+            <div class="doc__accent"></div>
+            <div class="doc__line"></div>
+            <div class="doc__line"></div>
+            <div class="doc__line doc__line--short"></div>
+            <div class="doc__line"></div>
+            <div class="doc__line doc__line--short"></div>
+          </div>
+          <div class="doc doc--front">
+            <div class="doc__accent"></div>
+            <div class="doc__line"></div>
+            <div class="doc__line doc__line--short"></div>
+            <div class="doc__line"></div>
+            <div class="doc__line"></div>
+            <div class="doc__line doc__line--short"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <span class="section__label">Testimonials</span>
+        <h2 class="section__title">What students say</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial fade-up">
+          <blockquote>The structured approach to essay technique completely changed how I write 20-mark answers. Went from a D to a B in my mocks.</blockquote>
+          <cite>A-Level student, AQA</cite>
+        </div>
+        <div class="testimonial fade-up">
+          <blockquote>Every session felt tailored — never generic. The resources included were genuinely better than anything my school provided.</blockquote>
+          <cite>GCSE student, Edexcel</cite>
+        </div>
+        <div class="testimonial fade-up">
+          <blockquote>Really understood how to break down mark schemes properly. I felt prepared walking into the exam in a way I hadn't before.</blockquote>
+          <cite>GCSE student, OCR</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__portrait fade-up" aria-hidden="true">
+          <div class="about__portrait-frame">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="28" r="17" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M9 74c0-17.12 13.88-31 31-31s31 13.88 31 31" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <span>Add your photo here</span>
+          </div>
+        </div>
+        <div class="about__text fade-up">
+          <span class="section__label">About</span>
+          <h2 class="section__title">A specialist, not a generalist.</h2>
+          <p>I teach Geography and only Geography. That focus means deeper knowledge of every specification, sharper insight into what examiners reward, and resources that are genuinely fit for purpose — not repurposed from other subjects.</p>
+          <p>With experience across all major UK exam boards at both GCSE and A-Level, I have developed a teaching approach that works for students at every starting point — whether catching up, keeping pace, or reaching for the top grade.</p>
+          <p>All sessions are conducted online, making high-quality, specialist tuition accessible wherever you are in the country.</p>
+          <a href="#contact" class="btn btn--navy">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__intro fade-up">
+          <span class="section__label">Book a Session</span>
+          <h2 class="section__title">Start with a free consultation.</h2>
+          <p>Fill in the form and I will be in touch within 24 hours to arrange an introductory call. No commitment — just a conversation about how I can help.</p>
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <svg viewBox="0 0 20 20" fill="none">
+                <path d="M10 2C6.686 2 4 4.686 4 8c0 5.25 6 10 6 10s6-4.75 6-10c0-3.314-2.686-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" stroke="currentColor" stroke-width="1.2"/>
+              </svg>
+              Online — available nationwide
+            </div>
+            <div class="contact__info-item">
+              <svg viewBox="0 0 20 20" fill="none">
+                <path d="M3 5h14v10a1 1 0 01-1 1H4a1 1 0 01-1-1V5zm0 0l7 5.5L17 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <!-- Replace with your email address -->
+              your@email.com
+            </div>
+          </div>
+        </div>
+        <form class="contact__form fade-up" id="contactForm" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name" />
+            </div>
+            <div class="form__field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email" />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="level">Qualification level</label>
+              <select id="level" name="level" required>
+                <option value="">Select level</option>
+                <option>GCSE</option>
+                <option>A-Level (AS)</option>
+                <option>A-Level (A2)</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label for="board">Exam board</label>
+              <select id="board" name="board" required>
+                <option value="">Select board</option>
+                <option>AQA</option>
+                <option>Edexcel</option>
+                <option>OCR</option>
+                <option>WJEC</option>
+                <option>Eduqas</option>
+                <option>Cambridge International</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="message">Anything to add (optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell me a bit about where you are with the subject and what you are hoping to achieve."></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--full">Send Enquiry</button>
+          <p class="form__note">I respond within 24 hours. No obligation.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__brand-name">Geography</span>
+          <span class="footer__brand-rule"></span>
+          <span class="footer__brand-sub">Tuition</span>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="#courses">Courses</a>
+          <a href="#approach">Approach</a>
+          <a href="#resources">Resources</a>
+          <a href="#about">About</a>
+          <a href="#contact">Book a Session</a>
+        </nav>
+        <p class="footer__copy">&copy; 2026 Geography Tuition. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
