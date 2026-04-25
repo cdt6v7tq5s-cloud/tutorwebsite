@@ -24,6 +24,7 @@
       </button>
       <ul class="nav__links" id="navLinks">
         <li><a href="#courses">Courses</a></li>
+        <li><a href="#planner">Study Plan</a></li>
         <li><a href="#approach">Approach</a></li>
         <li><a href="#resources">Resources</a></li>
         <li><a href="#about">About</a></li>
@@ -151,6 +152,100 @@
         <div class="board-cell">WJEC</div>
         <div class="board-cell">Eduqas</div>
         <div class="board-cell">Cambridge<small>International</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section planner" id="planner">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <span class="section__label">Free Tool</span>
+        <h2 class="section__title">Build your study plan</h2>
+        <p class="section__sub">Answer four questions and get a personalised, prioritised revision roadmap for your exact exam board — instantly.</p>
+      </div>
+      <div class="planner__card">
+
+        <div class="planner__progress">
+          <div class="planner__dots">
+            <span class="planner__dot planner__dot--active" id="dot1"></span>
+            <span class="planner__dot" id="dot2"></span>
+            <span class="planner__dot" id="dot3"></span>
+            <span class="planner__dot" id="dot4"></span>
+          </div>
+          <span class="planner__step-label" id="plannerLabel">Step 1 of 4</span>
+        </div>
+
+        <div class="planner__step" id="step1">
+          <h3 class="planner__q">What level are you studying?</h3>
+          <div class="planner__levels">
+            <button class="level-btn" data-value="GCSE">
+              <strong>GCSE</strong>
+              <span>Years 9 – 11</span>
+            </button>
+            <button class="level-btn" data-value="A-Level">
+              <strong>A-Level</strong>
+              <span>Years 12 – 13</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="planner__step planner__step--hidden" id="step2">
+          <h3 class="planner__q">Which exam board are you sitting?</h3>
+          <div class="planner__boards">
+            <button class="board-opt" data-value="AQA">AQA</button>
+            <button class="board-opt" data-value="Edexcel">Edexcel</button>
+            <button class="board-opt" data-value="OCR">OCR</button>
+            <button class="board-opt" data-value="WJEC">WJEC</button>
+            <button class="board-opt" data-value="Eduqas">Eduqas</button>
+            <button class="board-opt" data-value="Cambridge">Cambridge Int.</button>
+          </div>
+          <button class="planner__back" data-target="step1" data-dot="1" data-lbl="Step 1 of 4">Back</button>
+        </div>
+
+        <div class="planner__step planner__step--hidden" id="step3">
+          <h3 class="planner__q">Where are you now, and where do you want to be?</h3>
+          <div class="planner__grades">
+            <div class="grade-group">
+              <label>Current grade</label>
+              <div class="grade-group__options" id="currentGrades"></div>
+            </div>
+            <div class="grade-group">
+              <label>Target grade</label>
+              <div class="grade-group__options" id="targetGrades"></div>
+            </div>
+          </div>
+          <button class="btn btn--navy planner__next" id="step3Next" disabled>Continue</button>
+          <button class="planner__back" data-target="step2" data-dot="2" data-lbl="Step 2 of 4">Back</button>
+        </div>
+
+        <div class="planner__step planner__step--hidden" id="step4">
+          <h3 class="planner__q">How many weeks until your exam?</h3>
+          <div class="planner__weeks">
+            <div class="weeks-num"><span id="weeksVal">12</span><small>weeks</small></div>
+            <input type="range" id="weeksRange" min="1" max="40" value="12" />
+            <div class="weeks-ends"><span>1 week</span><span>40 weeks</span></div>
+          </div>
+          <button class="btn btn--gold" id="generateBtn">Generate My Plan</button>
+          <button class="planner__back" data-target="step3" data-dot="3" data-lbl="Step 3 of 4">Back</button>
+        </div>
+
+        <div class="planner__step planner__step--hidden" id="planResult">
+          <div class="result__head">
+            <div class="result__meta" id="resultMeta"></div>
+            <h3 class="result__title" id="resultTitle"></h3>
+            <p class="result__summary" id="resultSummary"></p>
+          </div>
+          <div class="result__body">
+            <div class="result__topics" id="resultTopics"></div>
+            <div class="result__stats" id="resultStats"></div>
+          </div>
+          <div class="result__cta">
+            <p>Ready to work through this plan with expert guidance?</p>
+            <a href="#contact" class="btn btn--gold">Book a Free Consultation</a>
+            <button class="planner__restart" id="restartBtn">Start again</button>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
