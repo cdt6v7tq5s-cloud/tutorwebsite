@@ -1246,6 +1246,129 @@ h1, h2, h3 {
 .board-opt--large:hover span,
 .board-opt--large.board-opt--selected span { color: rgba(255,255,255,0.6); }
 
+/* Coverage grid (step 4) */
+.coverage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.coverage-btn {
+  border: 2px solid var(--grey-border);
+  border-radius: var(--r);
+  padding: 1.25rem 1.25rem;
+  text-align: left;
+  background: var(--white);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: border-color var(--ease), background var(--ease), transform var(--ease);
+}
+.coverage-btn strong {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--navy);
+  transition: color var(--ease);
+}
+.coverage-btn span {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  line-height: 1.4;
+  transition: color var(--ease);
+}
+.coverage-btn:hover,
+.coverage-btn--selected {
+  border-color: var(--navy);
+  background: var(--navy);
+  transform: translateY(-1px);
+}
+.coverage-btn:hover strong,
+.coverage-btn--selected strong { color: var(--white); }
+.coverage-btn:hover span,
+.coverage-btn--selected span { color: rgba(255,255,255,0.6); }
+
+/* Weakness grid (step 5) */
+.planner__sub {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-bottom: 1.25rem;
+  margin-top: -0.5rem;
+}
+.weakness-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.weakness-btn {
+  border: 1.5px solid var(--grey-border);
+  border-radius: 2rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  background: var(--white);
+  cursor: pointer;
+  transition: border-color var(--ease), background var(--ease), color var(--ease);
+}
+.weakness-btn:hover { border-color: var(--navy); color: var(--navy); }
+.weakness-btn--selected {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+/* Step 6 — hours + weeks */
+.step6__two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+.step6__label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.875rem;
+}
+.hours-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.hours-btn {
+  border: 2px solid var(--grey-border);
+  border-radius: var(--r);
+  padding: 0.875rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+  background: var(--white);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--ease), background var(--ease), color var(--ease);
+}
+.hours-btn:hover { border-color: var(--navy); }
+.hours-btn--selected {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+/* Time warning in result */
+.result__warning {
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: var(--r);
+  padding: 0.875rem 1rem;
+  font-size: 0.875rem;
+  color: #92400e;
+  margin-bottom: 1.5rem;
+  line-height: 1.55;
+}
+
 /* Grade picker */
 .planner__grades {
   display: grid;
@@ -1493,6 +1616,7 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
 .topic-badge--refine     { background: #d1fae5; color: #059669; }
 .topic-badge--exam       { background: #dbeafe; color: #2563eb; }
 .topic-badge--coursework { background: #e0e7ff; color: #3730a3; }
+.topic-badge--boost      { background: var(--gold-pale); color: var(--gold); }
 
 .topic-subs {
   list-style: none;
@@ -1614,12 +1738,13 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
   .planner__levels { grid-template-columns: 1fr; }
   .planner__boards { grid-template-columns: repeat(2, 1fr); }
   .planner__grades { grid-template-columns: 1fr; gap: 1.5rem; }
+  .coverage-grid { grid-template-columns: 1fr; }
+  .step6__two { grid-template-columns: 1fr; gap: 1.5rem; }
   .result__body { grid-template-columns: 1fr; }
   .result__skills-grid { grid-template-columns: 1fr; }
   .result__stat-boxes { flex-direction: row; }
   .stat-box { flex: 1; }
   .result__cta { flex-direction: column; align-items: flex-start; }
-  .pricing__grid { grid-template-columns: 1fr; max-width: 400px; }
 }
 
 @media (max-width: 400px) {

@@ -27,7 +27,6 @@
         <li><a href="#planner">Study Plan</a></li>
         <li><a href="#approach">Approach</a></li>
         <li><a href="#resources">Resources</a></li>
-        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact" class="nav__book">Book a Session</a></li>
       </ul>
@@ -164,18 +163,20 @@
       <div class="section__header section__header--center">
         <span class="section__label">Free Tool</span>
         <h2 class="section__title">Build your study plan</h2>
-        <p class="section__sub">Answer four questions and get a personalised, prioritised revision roadmap for your exact exam board — instantly.</p>
+        <p class="section__sub">Answer six quick questions and get a revision plan built specifically around your gaps, your strengths, and your timeline.</p>
       </div>
       <div class="planner__card">
 
         <div class="planner__progress">
           <div class="planner__dots">
-            <span class="planner__dot planner__dot--active" id="dot1"></span>
-            <span class="planner__dot" id="dot2"></span>
-            <span class="planner__dot" id="dot3"></span>
-            <span class="planner__dot" id="dot4"></span>
+            <span class="planner__dot planner__dot--active"></span>
+            <span class="planner__dot"></span>
+            <span class="planner__dot"></span>
+            <span class="planner__dot"></span>
+            <span class="planner__dot"></span>
+            <span class="planner__dot"></span>
           </div>
-          <span class="planner__step-label" id="plannerLabel">Step 1 of 4</span>
+          <span class="planner__step-label" id="plannerLabel">Step 1 of 6</span>
         </div>
 
         <div class="planner__step" id="step1">
@@ -204,7 +205,7 @@
               <span>GCSE &amp; A-Level</span>
             </button>
           </div>
-          <button class="planner__back" data-target="step1" data-dot="1" data-lbl="Step 1 of 4">Back</button>
+          <button class="planner__back" data-target="step1" data-dot="1" data-lbl="Step 1 of 6">Back</button>
         </div>
 
         <div class="planner__step planner__step--hidden" id="step3">
@@ -220,18 +221,67 @@
             </div>
           </div>
           <button class="btn btn--navy planner__next" id="step3Next" disabled>Continue</button>
-          <button class="planner__back" data-target="step2" data-dot="2" data-lbl="Step 2 of 4">Back</button>
+          <button class="planner__back" data-target="step2" data-dot="2" data-lbl="Step 2 of 6">Back</button>
         </div>
 
         <div class="planner__step planner__step--hidden" id="step4">
-          <h3 class="planner__q">How many weeks until your exam?</h3>
-          <div class="planner__weeks">
-            <div class="weeks-num"><span id="weeksVal">12</span><small>weeks</small></div>
-            <input type="range" id="weeksRange" min="1" max="40" value="12" />
-            <div class="weeks-ends"><span>1 week</span><span>40 weeks</span></div>
+          <h3 class="planner__q">How far through your course are you?</h3>
+          <div class="coverage-grid">
+            <button class="coverage-btn" data-value="started">
+              <strong>Just started</strong>
+              <span>Early in the course, most topics still to come</span>
+            </button>
+            <button class="coverage-btn" data-value="halfway">
+              <strong>About halfway</strong>
+              <span>Some topics covered, more still to do</span>
+            </button>
+            <button class="coverage-btn" data-value="most">
+              <strong>Most of it done</strong>
+              <span>Nearly all topics taught, revision phase beginning</span>
+            </button>
+            <button class="coverage-btn" data-value="complete">
+              <strong>All topics covered</strong>
+              <span>Full course done, focusing on revision and exam prep</span>
+            </button>
           </div>
-          <button class="btn btn--gold" id="generateBtn">Generate My Plan</button>
-          <button class="planner__back" data-target="step3" data-dot="3" data-lbl="Step 3 of 4">Back</button>
+          <button class="planner__back" data-target="step3" data-dot="3" data-lbl="Step 3 of 6">Back</button>
+        </div>
+
+        <div class="planner__step planner__step--hidden" id="step5">
+          <h3 class="planner__q">What do you find hardest?</h3>
+          <p class="planner__sub">Select all that apply — this shapes which topics get pushed up your list.</p>
+          <div class="weakness-grid" id="weaknessGrid">
+            <button class="weakness-btn" data-value="extended-writing">Writing longer answers</button>
+            <button class="weakness-btn" data-value="case-studies">Remembering case studies</button>
+            <button class="weakness-btn" data-value="data-skills">Data, graphs and maps</button>
+            <button class="weakness-btn" data-value="diagram-skills">Drawing diagrams</button>
+            <button class="weakness-btn" data-value="exam-technique">Exam technique and timing</button>
+            <button class="weakness-btn" data-value="content">Remembering content generally</button>
+          </div>
+          <button class="btn btn--navy" id="step5Next">Continue</button>
+          <button class="planner__back" data-target="step4" data-dot="4" data-lbl="Step 4 of 6">Back</button>
+        </div>
+
+        <div class="planner__step planner__step--hidden" id="step6">
+          <h3 class="planner__q">Time and timeline.</h3>
+          <div class="step6__two">
+            <div class="step6__block">
+              <label class="step6__label">How many hours per week can you give to Geography?</label>
+              <div class="hours-grid">
+                <button class="hours-btn" data-value="1">1–2 hours</button>
+                <button class="hours-btn" data-value="3">3–4 hours</button>
+                <button class="hours-btn" data-value="5">5+ hours</button>
+              </div>
+            </div>
+            <div class="step6__block">
+              <label class="step6__label">Weeks until your exam</label>
+              <div class="weeks-num"><span id="weeksVal">12</span><small>weeks</small></div>
+              <input type="range" id="weeksRange" min="1" max="40" value="12" />
+              <div class="weeks-ends"><span>1 week</span><span>40 weeks</span></div>
+            </div>
+          </div>
+          <button class="btn btn--gold" id="generateBtn" disabled>Generate My Plan</button>
+          <button class="planner__back" data-target="step5" data-dot="5" data-lbl="Step 5 of 6">Back</button>
         </div>
 
         <div class="planner__step planner__step--hidden" id="planResult">
@@ -428,55 +478,6 @@
     </div>
   </section>
 
-  <section class="section pricing" id="pricing">
-    <div class="container">
-      <div class="section__header section__header--center">
-        <span class="section__label">Pricing</span>
-        <h2 class="section__title">Simple, transparent pricing.</h2>
-        <p class="section__sub">No hidden fees. Every session includes all resources, follow-up tasks, and written feedback.</p>
-      </div>
-      <div class="pricing__grid">
-
-        <div class="price-card fade-up">
-          <div class="price-card__level">GCSE</div>
-          <div class="price-card__amount">
-            <span class="price-card__currency">&pound;</span>
-            <span class="price-card__num">45</span>
-            <span class="price-card__per">/ session</span>
-          </div>
-          <p class="price-card__duration">50-minute 1-to-1 session</p>
-          <ul class="price-card__list">
-            <li>AQA and Edexcel covered</li>
-            <li>Personalised to your specification</li>
-            <li>Custom revision notes included</li>
-            <li>Past paper practice and feedback</li>
-            <li>Between-session tasks set</li>
-          </ul>
-          <a href="#contact" class="btn btn--navy btn--full">Book GCSE Tuition</a>
-        </div>
-
-        <div class="price-card price-card--featured fade-up">
-          <div class="price-card__level">A-Level</div>
-          <div class="price-card__amount">
-            <span class="price-card__currency">&pound;</span>
-            <span class="price-card__num">55</span>
-            <span class="price-card__per">/ session</span>
-          </div>
-          <p class="price-card__duration">50-minute 1-to-1 session</p>
-          <ul class="price-card__list">
-            <li>AQA and Edexcel covered</li>
-            <li>Essay and 20-mark answer technique</li>
-            <li>NEA guidance available</li>
-            <li>Synoptic thinking and Paper 3 prep</li>
-            <li>Between-session tasks set</li>
-          </ul>
-          <a href="#contact" class="btn btn--gold btn--full">Book A-Level Tuition</a>
-        </div>
-
-      </div>
-      <p class="pricing__note">First consultation is free — no obligation. Block booking discounts available on request.</p>
-    </div>
-  </section>
 
   <section class="section contact" id="contact">
     <div class="container">
@@ -560,7 +561,6 @@
           <a href="#courses">Courses</a>
           <a href="#approach">Approach</a>
           <a href="#resources">Resources</a>
-          <a href="#pricing">Pricing</a>
           <a href="#about">About</a>
           <a href="#contact">Book a Session</a>
         </nav>
