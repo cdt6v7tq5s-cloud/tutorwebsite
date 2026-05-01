@@ -163,7 +163,7 @@
       <div class="section__header section__header--center">
         <span class="section__label">Free Tool</span>
         <h2 class="section__title">Build your study plan</h2>
-        <p class="section__sub">Answer six quick questions and get a revision plan built specifically around your gaps, your strengths, and your timeline.</p>
+        <p class="section__sub">Rate your confidence on each topic, tell us where you struggle, and get a revision plan built around exactly what you need to work on.</p>
       </div>
       <div class="planner__card">
 
@@ -225,31 +225,25 @@
         </div>
 
         <div class="planner__step planner__step--hidden" id="step4">
-          <h3 class="planner__q">How far through your course are you?</h3>
-          <div class="coverage-grid">
-            <button class="coverage-btn" data-value="started">
-              <strong>Just started</strong>
-              <span>Early in the course, most topics still to come</span>
-            </button>
-            <button class="coverage-btn" data-value="halfway">
-              <strong>About halfway</strong>
-              <span>Some topics covered, more still to do</span>
-            </button>
-            <button class="coverage-btn" data-value="most">
-              <strong>Most of it done</strong>
-              <span>Nearly all topics taught, revision phase beginning</span>
-            </button>
-            <button class="coverage-btn" data-value="complete">
-              <strong>All topics covered</strong>
-              <span>Full course done, focusing on revision and exam prep</span>
-            </button>
+          <h3 class="planner__q">How confident are you on each topic?</h3>
+          <p class="planner__sub">Be honest — this is what drives your plan. Rate every topic, then hit Continue.</p>
+          <div class="conf__quickset">
+            <span>Quick set all:</span>
+            <button class="quickset-btn" data-val="not-covered">Not covered</button>
+            <button class="quickset-btn" data-val="low">Low</button>
+            <button class="quickset-btn" data-val="medium">Medium</button>
+            <button class="quickset-btn" data-val="high">High</button>
           </div>
+          <div class="conf__list" id="confList"></div>
+          <div class="conf__progress-bar"><div class="conf__progress-fill" id="confFill"></div></div>
+          <p class="conf__progress-label" id="confLabel">0 of 0 topics rated</p>
+          <button class="btn btn--navy" id="step4Next" disabled>Continue</button>
           <button class="planner__back" data-target="step3" data-dot="3" data-lbl="Step 3 of 6">Back</button>
         </div>
 
         <div class="planner__step planner__step--hidden" id="step5">
           <h3 class="planner__q">What do you find hardest?</h3>
-          <p class="planner__sub">Select all that apply — this shapes which topics get pushed up your list.</p>
+          <p class="planner__sub">Select all that apply — this adds another layer to your plan.</p>
           <div class="weakness-grid" id="weaknessGrid">
             <button class="weakness-btn" data-value="extended-writing">Writing longer answers</button>
             <button class="weakness-btn" data-value="case-studies">Remembering case studies</button>
